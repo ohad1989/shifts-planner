@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "weekStartsOn": 0,
+  "hourCap": 60,
+  "defaultNoDoubles": true,
+  "pdfFooter": "Questions → manager",
+  "roles": [
+    "bartender",
+    "grillman",
+    "chef"
+  ],
+  "restaurants": [
+    {
+      "id": "a",
+      "name": "Paris"
+    },
+    {
+      "id": "b",
+      "name": "Zim"
+    }
+  ],
+  "language": "he",
+  "theme": "light"
+}

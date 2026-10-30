@@ -1,0 +1,80 @@
+{
+  "templates": {
+    "a": {
+      "morning": {
+        "start": "11:00",
+        "end": "16:00",
+        "seats": [
+          {
+            "role": "bartender",
+            "count": 1
+          },
+          {
+            "role": "grillman",
+            "count": 1
+          },
+          {
+            "role": "chef",
+            "count": 1
+          }
+        ]
+      },
+      "evening": {
+        "start": "16:00",
+        "end": "23:00",
+        "seats": [
+          {
+            "role": "bartender",
+            "count": 1
+          },
+          {
+            "role": "grillman",
+            "count": 1
+          },
+          {
+            "role": "chef",
+            "count": 1
+          }
+        ]
+      }
+    },
+    "b": {
+      "morning": {
+        "start": "11:00",
+        "end": "16:00",
+        "seats": [
+          {
+            "role": "bartender",
+            "count": 1
+          },
+          {
+            "role": "grillman",
+            "count": 1
+          },
+          {
+            "role": "chef",
+            "count": 1
+          }
+        ]
+      },
+      "evening": {
+        "start": "16:00",
+        "end": "23:00",
+        "seats": [
+          {
+            "role": "bartender",
+            "count": 1
+          },
+          {
+            "role": "grillman",
+            "count": 1
+          },
+          {
+            "role": "chef",
+            "count": 1
+          }
+        ]
+      }
+    }
+  }
+}

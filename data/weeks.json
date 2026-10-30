@@ -1,0 +1,787 @@
+{
+  "weeks": {
+    "2026-10-25": {
+      "weekStart": "2026-10-25",
+      "status": {
+        "a": "draft",
+        "b": "draft"
+      },
+      "assignments": [
+        {
+          "id": "2026-10-25:a:2026-10-25:morning:bartender:0",
+          "restaurantId": "a",
+          "date": "2026-10-25",
+          "period": "morning",
+          "role": "bartender",
+          "seatIndex": 0,
+          "personId": "p-maya",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:a:2026-10-25:morning:grillman:0",
+          "restaurantId": "a",
+          "date": "2026-10-25",
+          "period": "morning",
+          "role": "grillman",
+          "seatIndex": 0,
+          "personId": "p-omer",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:a:2026-10-25:morning:chef:0",
+          "restaurantId": "a",
+          "date": "2026-10-25",
+          "period": "morning",
+          "role": "chef",
+          "seatIndex": 0,
+          "personId": "p-ron",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:a:2026-10-25:evening:bartender:0",
+          "restaurantId": "a",
+          "date": "2026-10-25",
+          "period": "evening",
+          "role": "bartender",
+          "seatIndex": 0,
+          "personId": "p-noam",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:a:2026-10-25:evening:grillman:0",
+          "restaurantId": "a",
+          "date": "2026-10-25",
+          "period": "evening",
+          "role": "grillman",
+          "seatIndex": 0,
+          "personId": "p-lior",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:a:2026-10-25:evening:chef:0",
+          "restaurantId": "a",
+          "date": "2026-10-25",
+          "period": "evening",
+          "role": "chef",
+          "seatIndex": 0,
+          "personId": "p-yael",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:b:2026-10-25:morning:bartender:0",
+          "restaurantId": "b",
+          "date": "2026-10-25",
+          "period": "morning",
+          "role": "bartender",
+          "seatIndex": 0,
+          "personId": "p-sara",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:b:2026-10-25:morning:grillman:0",
+          "restaurantId": "b",
+          "date": "2026-10-25",
+          "period": "morning",
+          "role": "grillman",
+          "seatIndex": 0,
+          "personId": "p-eden",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:b:2026-10-25:morning:chef:0",
+          "restaurantId": "b",
+          "date": "2026-10-25",
+          "period": "morning",
+          "role": "chef",
+          "seatIndex": 0,
+          "personId": "p-hila",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:b:2026-10-25:evening:bartender:0",
+          "restaurantId": "b",
+          "date": "2026-10-25",
+          "period": "evening",
+          "role": "bartender",
+          "seatIndex": 0,
+          "personId": "p-noga",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:b:2026-10-25:evening:grillman:0",
+          "restaurantId": "b",
+          "date": "2026-10-25",
+          "period": "evening",
+          "role": "grillman",
+          "seatIndex": 0,
+          "personId": "p-amit",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:b:2026-10-25:evening:chef:0",
+          "restaurantId": "b",
+          "date": "2026-10-25",
+          "period": "evening",
+          "role": "chef",
+          "seatIndex": 0,
+          "personId": "p-ori",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:a:2026-10-26:morning:bartender:0",
+          "restaurantId": "a",
+          "date": "2026-10-26",
+          "period": "morning",
+          "role": "bartender",
+          "seatIndex": 0,
+          "personId": "p-maya",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:a:2026-10-26:morning:grillman:0",
+          "restaurantId": "a",
+          "date": "2026-10-26",
+          "period": "morning",
+          "role": "grillman",
+          "seatIndex": 0,
+          "personId": "p-tal",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:a:2026-10-26:morning:chef:0",
+          "restaurantId": "a",
+          "date": "2026-10-26",
+          "period": "morning",
+          "role": "chef",
+          "seatIndex": 0,
+          "personId": "p-dani",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:a:2026-10-26:evening:bartender:0",
+          "restaurantId": "a",
+          "date": "2026-10-26",
+          "period": "evening",
+          "role": "bartender",
+          "seatIndex": 0,
+          "personId": "p-aya",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:a:2026-10-26:evening:grillman:0",
+          "restaurantId": "a",
+          "date": "2026-10-26",
+          "period": "evening",
+          "role": "grillman",
+          "seatIndex": 0,
+          "personId": "p-omer",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:a:2026-10-26:evening:chef:0",
+          "restaurantId": "a",
+          "date": "2026-10-26",
+          "period": "evening",
+          "role": "chef",
+          "seatIndex": 0,
+          "personId": "p-ron",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:b:2026-10-26:morning:bartender:0",
+          "restaurantId": "b",
+          "date": "2026-10-26",
+          "period": "morning",
+          "role": "bartender",
+          "seatIndex": 0,
+          "personId": "p-ido",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:b:2026-10-26:morning:grillman:0",
+          "restaurantId": "b",
+          "date": "2026-10-26",
+          "period": "morning",
+          "role": "grillman",
+          "seatIndex": 0,
+          "personId": "p-gal",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:b:2026-10-26:morning:chef:0",
+          "restaurantId": "b",
+          "date": "2026-10-26",
+          "period": "morning",
+          "role": "chef",
+          "seatIndex": 0,
+          "personId": "p-hila",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:b:2026-10-26:evening:bartender:0",
+          "restaurantId": "b",
+          "date": "2026-10-26",
+          "period": "evening",
+          "role": "bartender",
+          "seatIndex": 0,
+          "personId": "p-noga",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:b:2026-10-26:evening:grillman:0",
+          "restaurantId": "b",
+          "date": "2026-10-26",
+          "period": "evening",
+          "role": "grillman",
+          "seatIndex": 0,
+          "personId": "p-amit",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:b:2026-10-26:evening:chef:0",
+          "restaurantId": "b",
+          "date": "2026-10-26",
+          "period": "evening",
+          "role": "chef",
+          "seatIndex": 0,
+          "personId": "p-ori",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:a:2026-10-27:morning:bartender:0",
+          "restaurantId": "a",
+          "date": "2026-10-27",
+          "period": "morning",
+          "role": "bartender",
+          "seatIndex": 0,
+          "personId": "p-aya",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:a:2026-10-27:morning:grillman:0",
+          "restaurantId": "a",
+          "date": "2026-10-27",
+          "period": "morning",
+          "role": "grillman",
+          "seatIndex": 0,
+          "personId": "p-tal",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:a:2026-10-27:morning:chef:0",
+          "restaurantId": "a",
+          "date": "2026-10-27",
+          "period": "morning",
+          "role": "chef",
+          "seatIndex": 0,
+          "personId": "p-dani",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:a:2026-10-27:evening:bartender:0",
+          "restaurantId": "a",
+          "date": "2026-10-27",
+          "period": "evening",
+          "role": "bartender",
+          "seatIndex": 0,
+          "personId": "p-noam",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:a:2026-10-27:evening:grillman:0",
+          "restaurantId": "a",
+          "date": "2026-10-27",
+          "period": "evening",
+          "role": "grillman",
+          "seatIndex": 0,
+          "personId": "p-lior",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:a:2026-10-27:evening:chef:0",
+          "restaurantId": "a",
+          "date": "2026-10-27",
+          "period": "evening",
+          "role": "chef",
+          "seatIndex": 0,
+          "personId": "p-ron",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:b:2026-10-27:morning:bartender:0",
+          "restaurantId": "b",
+          "date": "2026-10-27",
+          "period": "morning",
+          "role": "bartender",
+          "seatIndex": 0,
+          "personId": "p-ido",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:b:2026-10-27:morning:grillman:0",
+          "restaurantId": "b",
+          "date": "2026-10-27",
+          "period": "morning",
+          "role": "grillman",
+          "seatIndex": 0,
+          "personId": "p-gal",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:b:2026-10-27:morning:chef:0",
+          "restaurantId": "b",
+          "date": "2026-10-27",
+          "period": "morning",
+          "role": "chef",
+          "seatIndex": 0,
+          "personId": "p-ori",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:b:2026-10-27:evening:bartender:0",
+          "restaurantId": "b",
+          "date": "2026-10-27",
+          "period": "evening",
+          "role": "bartender",
+          "seatIndex": 0,
+          "personId": "p-sara",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:b:2026-10-27:evening:grillman:0",
+          "restaurantId": "b",
+          "date": "2026-10-27",
+          "period": "evening",
+          "role": "grillman",
+          "seatIndex": 0,
+          "personId": "p-eden",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:b:2026-10-27:evening:chef:0",
+          "restaurantId": "b",
+          "date": "2026-10-27",
+          "period": "evening",
+          "role": "chef",
+          "seatIndex": 0,
+          "personId": "p-ori",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:a:2026-10-28:morning:bartender:0",
+          "restaurantId": "a",
+          "date": "2026-10-28",
+          "period": "morning",
+          "role": "bartender",
+          "seatIndex": 0,
+          "personId": "p-noam",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:a:2026-10-28:morning:grillman:0",
+          "restaurantId": "a",
+          "date": "2026-10-28",
+          "period": "morning",
+          "role": "grillman",
+          "seatIndex": 0,
+          "personId": "p-omer",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:a:2026-10-28:morning:chef:0",
+          "restaurantId": "a",
+          "date": "2026-10-28",
+          "period": "morning",
+          "role": "chef",
+          "seatIndex": 0,
+          "personId": "p-dani",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:a:2026-10-28:evening:bartender:0",
+          "restaurantId": "a",
+          "date": "2026-10-28",
+          "period": "evening",
+          "role": "bartender",
+          "seatIndex": 0,
+          "personId": "p-aya",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:a:2026-10-28:evening:grillman:0",
+          "restaurantId": "a",
+          "date": "2026-10-28",
+          "period": "evening",
+          "role": "grillman",
+          "seatIndex": 0,
+          "personId": "p-lior",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:a:2026-10-28:evening:chef:0",
+          "restaurantId": "a",
+          "date": "2026-10-28",
+          "period": "evening",
+          "role": "chef",
+          "seatIndex": 0,
+          "personId": "p-ron",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:b:2026-10-28:morning:bartender:0",
+          "restaurantId": "b",
+          "date": "2026-10-28",
+          "period": "morning",
+          "role": "bartender",
+          "seatIndex": 0,
+          "personId": "p-sara",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:b:2026-10-28:morning:grillman:0",
+          "restaurantId": "b",
+          "date": "2026-10-28",
+          "period": "morning",
+          "role": "grillman",
+          "seatIndex": 0,
+          "personId": "p-eden",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:b:2026-10-28:morning:chef:0",
+          "restaurantId": "b",
+          "date": "2026-10-28",
+          "period": "morning",
+          "role": "chef",
+          "seatIndex": 0,
+          "personId": "p-yuval",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:b:2026-10-28:evening:bartender:0",
+          "restaurantId": "b",
+          "date": "2026-10-28",
+          "period": "evening",
+          "role": "bartender",
+          "seatIndex": 0,
+          "personId": "p-ido",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:b:2026-10-28:evening:grillman:0",
+          "restaurantId": "b",
+          "date": "2026-10-28",
+          "period": "evening",
+          "role": "grillman",
+          "seatIndex": 0,
+          "personId": "p-amit",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:b:2026-10-28:evening:chef:0",
+          "restaurantId": "b",
+          "date": "2026-10-28",
+          "period": "evening",
+          "role": "chef",
+          "seatIndex": 0,
+          "personId": "p-hila",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:a:2026-10-29:morning:bartender:0",
+          "restaurantId": "a",
+          "date": "2026-10-29",
+          "period": "morning",
+          "role": "bartender",
+          "seatIndex": 0,
+          "personId": "p-maya",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:a:2026-10-29:morning:grillman:0",
+          "restaurantId": "a",
+          "date": "2026-10-29",
+          "period": "morning",
+          "role": "grillman",
+          "seatIndex": 0,
+          "personId": "p-tal",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:a:2026-10-29:morning:chef:0",
+          "restaurantId": "a",
+          "date": "2026-10-29",
+          "period": "morning",
+          "role": "chef",
+          "seatIndex": 0,
+          "personId": "p-yael",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:a:2026-10-29:evening:bartender:0",
+          "restaurantId": "a",
+          "date": "2026-10-29",
+          "period": "evening",
+          "role": "bartender",
+          "seatIndex": 0,
+          "personId": "p-aya",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:a:2026-10-29:evening:grillman:0",
+          "restaurantId": "a",
+          "date": "2026-10-29",
+          "period": "evening",
+          "role": "grillman",
+          "seatIndex": 0,
+          "personId": "p-omer",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:a:2026-10-29:evening:chef:0",
+          "restaurantId": "a",
+          "date": "2026-10-29",
+          "period": "evening",
+          "role": "chef",
+          "seatIndex": 0,
+          "personId": "p-dani",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:b:2026-10-29:morning:bartender:0",
+          "restaurantId": "b",
+          "date": "2026-10-29",
+          "period": "morning",
+          "role": "bartender",
+          "seatIndex": 0,
+          "personId": "p-ori",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:b:2026-10-29:morning:grillman:0",
+          "restaurantId": "b",
+          "date": "2026-10-29",
+          "period": "morning",
+          "role": "grillman",
+          "seatIndex": 0,
+          "personId": "p-gal",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:b:2026-10-29:morning:chef:0",
+          "restaurantId": "b",
+          "date": "2026-10-29",
+          "period": "morning",
+          "role": "chef",
+          "seatIndex": 0,
+          "personId": "p-hila",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:b:2026-10-29:evening:bartender:0",
+          "restaurantId": "b",
+          "date": "2026-10-29",
+          "period": "evening",
+          "role": "bartender",
+          "seatIndex": 0,
+          "personId": "p-noga",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:b:2026-10-29:evening:grillman:0",
+          "restaurantId": "b",
+          "date": "2026-10-29",
+          "period": "evening",
+          "role": "grillman",
+          "seatIndex": 0,
+          "personId": "p-amit",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:b:2026-10-29:evening:chef:0",
+          "restaurantId": "b",
+          "date": "2026-10-29",
+          "period": "evening",
+          "role": "chef",
+          "seatIndex": 0,
+          "personId": "p-yuval",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:a:2026-10-31:evening:bartender:0",
+          "restaurantId": "a",
+          "date": "2026-10-31",
+          "period": "evening",
+          "role": "bartender",
+          "seatIndex": 0,
+          "personId": "p-noam",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:a:2026-10-31:evening:grillman:0",
+          "restaurantId": "a",
+          "date": "2026-10-31",
+          "period": "evening",
+          "role": "grillman",
+          "seatIndex": 0,
+          "personId": "p-lior",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:a:2026-10-31:evening:chef:0",
+          "restaurantId": "a",
+          "date": "2026-10-31",
+          "period": "evening",
+          "role": "chef",
+          "seatIndex": 0,
+          "personId": "p-yael",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:b:2026-10-31:evening:bartender:0",
+          "restaurantId": "b",
+          "date": "2026-10-31",
+          "period": "evening",
+          "role": "bartender",
+          "seatIndex": 0,
+          "personId": "p-ido",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:b:2026-10-31:evening:grillman:0",
+          "restaurantId": "b",
+          "date": "2026-10-31",
+          "period": "evening",
+          "role": "grillman",
+          "seatIndex": 0,
+          "personId": "p-eden",
+          "override": false,
+          "overrideReason": ""
+        },
+        {
+          "id": "2026-10-25:b:2026-10-31:evening:chef:0",
+          "restaurantId": "b",
+          "date": "2026-10-31",
+          "period": "evening",
+          "role": "chef",
+          "seatIndex": 0,
+          "personId": "p-yuval",
+          "override": false,
+          "overrideReason": ""
+        }
+      ],
+      "lastArrangeReport": {
+        "at": "2026-10-30T15:05:09.529Z",
+        "scope": "both",
+        "mode": "replace-all",
+        "filled": 66,
+        "leftOpen": 0,
+        "atMaxDays": [
+          "Aya Cohen",
+          "Maya Bar",
+          "Lior Ben",
+          "Yael Nir",
+          "Noga Shalev",
+          "Eden Azulay",
+          "Yuval Mor"
+        ],
+        "unusedCover": [
+          "Noam Levi (4/5 days, home only)",
+          "Tal Mizrahi (3/4 days, home only)",
+          "Ido Paz (4/5 days, home only)",
+          "Eden Azulay (4/4 days, home only)"
+        ],
+        "opens": []
+      },
+      "published": {},
+      "days": {
+        "2026-10-25": {
+          "mode": "both"
+        },
+        "2026-10-26": {
+          "mode": "both"
+        },
+        "2026-10-27": {
+          "mode": "both"
+        },
+        "2026-10-28": {
+          "mode": "both"
+        },
+        "2026-10-29": {
+          "mode": "both"
+        },
+        "2026-10-30": {
+          "mode": "closed"
+        },
+        "2026-10-31": {
+          "mode": "evening",
+          "eveningStart": "19:00"
+        }
+      }
+    }
+  }
+}
