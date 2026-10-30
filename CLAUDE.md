@@ -8,15 +8,19 @@ The spec is in `REQUIREMENTS.md` (v1.3). Read it before making functional change
 - React 19 + Vite 7 + TypeScript (strict). jsPDF + jspdf-autotable for PDFs.
 - `npm install` (once, online) → `npm run dev` → http://localhost:5173
 - `npm run build` runs `tsc -b && vite build`. `npm run preview` serves the build.
-- `npm run test:arrange` runs `npx tsx scripts/test-arrange.ts`, which checks the solver against the §14 success criteria using the real `data/*.json` files.
+- `npm run test:arrange` runs `npx tsx scripts/test-arrange.ts`, which checks the solver against the §14 success criteria using the real data, read through the same `DataStore` as the app.
 
 ## Persistence (important)
 
-- The source of truth is the JSON files in `data/`: `settings.json`, `people.json`, `templates.json` and `weeks.json`.
-- `vite.config.ts` contains a small middleware plugin (`dataFileApi`). It serves `GET` and `PUT /api/data/<file>.json` in both dev and preview. Writes go to a `.tmp` file that is then renamed, and errors return a 500.
+- Data is four documents: `settings`, `people`, `templates` and `weeks`. The client sees them as `GET`/`PUT /api/data/<name>.json`.
+- Storage is behind the `DataStore` interface in `server/storage/` (`get`, `put`, `close`). `createStore()` in `server/storage/index.ts` picks the backend from the `DATA_STORE` env var:
+  - `sqlite` (default, interim): `data/shift-planner.db`, one JSON row per document in table `documents` (`sqlite.ts`, uses built-in `node:sqlite`). A missing document is imported from `data/<name>.json` if present, otherwise from `data-example/`.
+  - `json`: the original `data/<name>.json` files, written via temp file + rename (`json-file.ts`).
+  - To add a backend (e.g. Postgres for multi-user), implement `DataStore` and register it in `factories`. Never import a backend directly from app code.
+- `vite.config.ts` contains a small middleware plugin (`dataApi`) that serves the API in both dev and preview through the store (opened lazily, so `vite build` doesn't touch it). Errors return a 500.
 - `src/api.ts` is the fetch client. `src/store.ts` (the `useStore` hook) keeps an in-memory copy of the files and writes every change back immediately. Writes are queued per file so they land in order.
 - Don't use localStorage or IndexedDB as storage, and never embed staff or week data in source.
-- `data/` is git-ignored (the GitHub repo is public). `dataFileApi` copies a missing file from `data-example/` on first GET. Never commit real data.
+- `data/` is git-ignored (the GitHub repo is public). Never commit real data.
 
 ## Source map
 

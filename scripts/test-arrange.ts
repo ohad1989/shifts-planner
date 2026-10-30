@@ -1,5 +1,7 @@
-// Run: npx tsx scripts/test-arrange.ts  — checks the §14 solver criteria on data/*.json
-import fs from "node:fs";
+// Run: npx tsx scripts/test-arrange.ts  — checks the §14 solver criteria on the app's data
+// (read through the same store as the app; DATA_STORE picks the backend).
+import path from "node:path";
+import { createStore } from "../server/storage";
 import { arrangeWeek } from "../src/arrange";
 import { ineligibleReasons } from "../src/eligibility";
 import { emptyWeek, setSlot } from "../src/week";
@@ -7,14 +9,15 @@ import { weekdayIndex } from "../src/dates";
 import { defaultWeekDays } from "../src/workdays";
 import type { PeopleFile, Settings, Templates } from "../src/types";
 
-if (!fs.existsSync("data/people.json")) {
-  console.log("No data/people.json (data/ is private and not in git). Run the app once and add staff first.");
+const store = createStore({ dataDir: path.resolve("data"), exampleDir: path.resolve("data-example") });
+const settings = (await store.get("settings")) as Settings;
+const people = ((await store.get("people")) as PeopleFile).people;
+const templates = (await store.get("templates")) as Templates;
+await store.close();
+if (people.length === 0) {
+  console.log("No staff yet (data/ is private and not in git). Run the app once and add staff first.");
   process.exit(0);
 }
-const read = <T,>(f: string): T => JSON.parse(fs.readFileSync(`data/${f}`, "utf8"));
-const settings = read<Settings>("settings.json");
-const people = read<PeopleFile>("people.json").people;
-const templates = read<Templates>("templates.json");
 let fails = 0;
 const ok = (c: boolean, m: string) => { console.log(`${c ? "PASS" : "FAIL"}  ${m}`); if (!c) fails++; };
 
