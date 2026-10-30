@@ -7,6 +7,10 @@ import { weekdayIndex } from "../src/dates";
 import { defaultWeekDays } from "../src/workdays";
 import type { PeopleFile, Settings, Templates } from "../src/types";
 
+if (!fs.existsSync("data/people.json")) {
+  console.log("No data/people.json (data/ is private and not in git). Run the app once and add staff first.");
+  process.exit(0);
+}
 const read = <T,>(f: string): T => JSON.parse(fs.readFileSync(`data/${f}`, "utf8"));
 const settings = read<Settings>("settings.json");
 const people = read<PeopleFile>("people.json").people;

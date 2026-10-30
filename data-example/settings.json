@@ -3,7 +3,7 @@
   "weekStartsOn": 0,
   "hourCap": 60,
   "defaultNoDoubles": true,
-  "pdfFooter": "Questions → manager",
+  "pdfFooter": "",
   "roles": [
     "bartender",
     "grillman",
@@ -12,13 +12,11 @@
   "restaurants": [
     {
       "id": "a",
-      "name": "Paris"
+      "name": "Restaurant A"
     },
     {
       "id": "b",
-      "name": "Zim"
+      "name": "Restaurant B"
     }
-  ],
-  "language": "he",
-  "theme": "light"
+  ]
 }

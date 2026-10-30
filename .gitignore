@@ -2,5 +2,7 @@ node_modules
 dist
 *.local
 *.tmp
+# Private staff and schedule data; starter files live in data-example/
+data/
 .claude/
 .DS_Store

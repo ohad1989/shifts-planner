@@ -14,6 +14,9 @@ the Vite dev server includes a tiny local file service (`/api/data/*.json`) that
 writes those files. Every edit is written immediately. Back up the `data` folder to back up
 everything.
 
+`data/` holds real staff and schedule data, so it is git-ignored and never uploaded. On a fresh
+clone, the first run creates `data/` from the empty starter files in `data-example/`.
+
 For a production-style run: `npm run build && npm run preview`.
 
 ## Using it

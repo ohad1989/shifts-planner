@@ -3,7 +3,9 @@ import react from "@vitejs/plugin-react";
 import fs from "node:fs";
 import path from "node:path";
 
+// data/ is private (git-ignored). A fresh clone starts from data-example/.
 const DATA_DIR = path.resolve(import.meta.dirname, "data");
+const EXAMPLE_DIR = path.resolve(import.meta.dirname, "data-example");
 const ALLOWED = new Set([
   "settings.json",
   "people.json",
@@ -41,6 +43,10 @@ function dataFileApi(): Plugin {
     const full = path.join(DATA_DIR, file);
     try {
     if (req.method === "GET") {
+      if (!fs.existsSync(full)) {
+        fs.mkdirSync(DATA_DIR, { recursive: true });
+        fs.copyFileSync(path.join(EXAMPLE_DIR, file), full);
+      }
       const json = fs.readFileSync(full, "utf8");
       res.setHeader("Content-Type", "application/json; charset=utf-8");
       res.end(json);

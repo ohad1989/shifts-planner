@@ -16,6 +16,7 @@ The spec is in `REQUIREMENTS.md` (v1.3). Read it before making functional change
 - `vite.config.ts` contains a small middleware plugin (`dataFileApi`). It serves `GET` and `PUT /api/data/<file>.json` in both dev and preview. Writes go to a `.tmp` file that is then renamed, and errors return a 500.
 - `src/api.ts` is the fetch client. `src/store.ts` (the `useStore` hook) keeps an in-memory copy of the files and writes every change back immediately. Writes are queued per file so they land in order.
 - Don't use localStorage or IndexedDB as storage, and never embed staff or week data in source.
+- `data/` is git-ignored (the GitHub repo is public). `dataFileApi` copies a missing file from `data-example/` on first GET. Never commit real data.
 
 ## Source map
 
