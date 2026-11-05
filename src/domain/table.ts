@@ -86,17 +86,3 @@ export function weekTableCsv(opts: {
   if (settings.pdfFooter) lines.push("", csvRow([settings.pdfFooter]));
   return lines.join("\r\n");
 }
-
-export function downloadWeekTable(opts: Parameters<typeof weekTableCsv>[0]): void {
-  const csv = "﻿" + weekTableCsv(opts);
-  const restaurant =
-    opts.settings.restaurants.find((r) => r.id === opts.restaurantId)?.name ?? opts.restaurantId;
-  const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
-  const link = document.createElement("a");
-  link.href = url;
-  link.download = `${restaurant.replace(/\s+/g, "-")}-${opts.week.weekStart}.csv`;
-  document.body.appendChild(link);
-  link.click();
-  link.remove();
-  setTimeout(() => URL.revokeObjectURL(url), 1000);
-}

@@ -1,4 +1,3 @@
-import { createContext, useContext } from "react";
 import type { Lang, Period } from "./types";
 
 /*
@@ -21,7 +20,6 @@ const HE: Record<string, string> = {
   Settings: "הגדרות",
   "Saving…": "שומר…",
   "Saved {time}": "נשמר {time}",
-  "All data on disk": "כל הנתונים שמורים",
   Language: "שפה",
   Theme: "ערכת צבעים",
   "Theme: {mode}": "ערכת צבעים: {mode}",
@@ -34,12 +32,22 @@ const HE: Record<string, string> = {
   "Previous week": "שבוע קודם",
   "Next week": "שבוע הבא",
   "This week": "השבוע",
-  "Can't read the data files": "לא ניתן לקרוא את קובצי הנתונים",
-  "Start the app with": "הפעילו את האפליקציה עם",
-  "from the app folder so the local file service is running.": "מתיקיית האפליקציה כדי ששירות הקבצים המקומי יפעל.",
   Retry: "נסו שוב",
   "Loading…": "טוען…",
   Close: "סגירה",
+  "All data on this device": "כל הנתונים שמורים במכשיר",
+  "Can't read the data": "לא ניתן לקרוא את הנתונים",
+  Continue: "המשך",
+  Replace: "החלף",
+  DRAFT: "טיוטה",
+  Backup: "גיבוי",
+  "Export backup": "ייצוא גיבוי",
+  "Import backup…": "ייבוא גיבוי…",
+  "Backup restored.": "הגיבוי שוחזר.",
+  "Replace all data on this device with the backup ({n} people, {w} weeks)?":
+    "להחליף את כל הנתונים במכשיר בגיבוי ({n} עובדים, {w} שבועות)?",
+  "All data is stored on this device. Export a backup file to keep a copy or to move the data to another phone, tablet or computer.":
+    "כל הנתונים נשמרים במכשיר הזה. ייצאו קובץ גיבוי כדי לשמור עותק או להעביר את הנתונים לטלפון, טאבלט או מחשב אחר.",
 
   // planner
   "{n} assigned seat(s) on {day} will be removed. Continue?": "{n} משבצות מאוישות ב{day} יימחקו. להמשיך?",
@@ -279,17 +287,4 @@ export function translateReason(lang: Lang, s: string): string {
   let out = s;
   for (const [re, fn] of REASONS_HE) out = out.replace(re, (...args) => fn(args as unknown as RegExpMatchArray));
   return out;
-}
-
-export const I18nContext = createContext<Lang>("en");
-
-export function useI18n() {
-  const lang = useContext(I18nContext);
-  return {
-    lang,
-    t: (key: string, vars?: Record<string, string | number>) => translate(lang, key, vars),
-    role: (r: string) => roleLabel(lang, r),
-    period: (p: Period) => periodLabel(lang, p),
-    reason: (s: string) => translateReason(lang, s),
-  };
 }

@@ -1,15 +1,16 @@
 import { jsPDF } from "jspdf";
 import autoTable from "jspdf-autotable";
-import { dayLabel, formatWeekRange, shortDate, weekDates } from "./dates";
-import { PERIODS, slotsFor } from "./week";
-import { assignmentTimes, periodOpen } from "./workdays";
+import { dayLabel, formatWeekRange, shortDate, weekDates } from "@/domain/dates";
+import { PERIODS, slotsFor } from "@/domain/week";
+import { assignmentTimes, periodOpen } from "@/domain/workdays";
 import type {
+  Lang,
   Person,
   RestaurantId,
   Settings,
   Templates,
   WeekRecord,
-} from "./types";
+} from "@/domain/types";
 
 // The built-in PDF fonts only cover Latin-1; map common symbols so they print.
 function pdfSafe(s: string): string {
@@ -23,13 +24,16 @@ function pdfSafe(s: string): string {
 
 export const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 
-export function downloadWeekPdf(opts: {
+// The built-in PDF fonts are Latin-1 only, so the web PDF is always in English
+// (`lang` is accepted for the same signature as the native version).
+export async function downloadWeekPdf(opts: {
   week: WeekRecord;
   restaurantId: RestaurantId;
   settings: Settings;
   people: Person[];
   templates: Templates;
-}): void {
+  lang?: Lang;
+}): Promise<void> {
   const restaurant = opts.settings.restaurants.find(
     (r) => r.id === opts.restaurantId,
   );

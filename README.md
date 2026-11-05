@@ -1,46 +1,85 @@
 # Shift Planner
 
-Offline, manager-only weekly shift planner for two restaurants (see `REQUIREMENTS.md`).
+Weekly shift planner for two restaurants, for the manager (see `REQUIREMENTS.md`).
+Cross-platform app built with Expo: iOS, Android and web from one codebase.
 
-## Run
+## Run it
 
+```bash
+npm install
+npm start
 ```
-npm install          # once, needs internet
-npm run dev          # then open http://localhost:5173
+
+Then press `w` for web, or scan the QR code with Expo Go on a phone (`npm run web`,
+`npm run ios` and `npm run android` go straight to one platform).
+
+All data is stored on the device, in an SQLite database (`expo-sqlite`). On the web
+it lives in the browser's storage for this site. Nothing is sent to a server. A fresh
+install starts from the empty starter files in `data-example/`.
+
+## Moving data between devices, and from the old desktop version
+
+Settings → **Backup**:
+
+- **Export backup** saves a `.backup.json` file with all staff, settings and weeks
+  (on a phone, the share sheet opens so you can save it to Files, Drive, email…).
+- **Import backup…** replaces everything on this device with a backup file.
+
+Data from the earlier desktop version (the private `data/` folder, either
+`data/shift-planner.db` or `data/*.json`) can be turned into a backup file:
+
+```bash
+npm run export:backup
 ```
 
-After `npm install`, everything runs with the network off. All data lives in `data/`; the
-Vite server includes a tiny local data service (`/api/data/*.json`) that reads and writes it.
-Every edit is written immediately. Back up the `data` folder to back up everything (stop the
-app first so the SQLite files are consistent).
-
-Storage backend, chosen with the `DATA_STORE` environment variable:
-
-- `sqlite` (default): a single database file, `data/shift-planner.db`. Any existing
-  `data/*.json` files are imported into it on first run.
-- `json`: one file per document, `data/*.json` (the original format).
-  PowerShell: `$env:DATA_STORE="json"; npm run dev`.
-
-The backends share one interface (`server/storage/`), so another database can be added later
-without changing the app.
-
-`data/` holds real staff and schedule data, so it is git-ignored and never uploaded. On a fresh
-clone, the first run creates the data from the empty starter files in `data-example/`.
-
-For a production-style run: `npm run build && npm run preview`.
+Then import that file in the app. Backup files hold real staff data: keep them out
+of git (`*.backup.json` and `data/` are git-ignored, and the repo is public).
 
 ## Using it
 
-- **Planner** – pick restaurant and week, click **Arrange both restaurants** (or one).
-  Click any seat to reassign, unassign or override (needs a reason). Tick **Edit seats**
-  to add or remove a seat for one day.
-- **Publish** – checklist (conflicts, open seats, overrides, hour warnings), Publish /
-  Reopen, Download PDF, Copy WhatsApp text.
-- **People** – staff, roles, cover flag and all restrictions.
-- **Settings** – names, week start, hours, staffing per period, roles, hour cap, footer.
+- **Planner**: pick a restaurant and week, tap **Arrange both restaurants** (or one).
+  Tap any seat to reassign, unassign, override (needs a reason) or set custom hours.
+  Tick **Edit seats** to add or remove a seat for one day. **Working days** changes
+  which shifts run this week.
+- **Publish**: checklist (conflicts, open seats, overrides, hour warnings), Publish /
+  Reopen, PDF, table for Excel (CSV), and WhatsApp text.
+- **People**: staff, roles, cover flag, priority and all restrictions.
+- **Settings**: names, week start, hour cap, footer, usual working days, roles,
+  shift times and seat counts, language, theme, backup.
 
-## Solver check
+The header switches language (English / Hebrew, right-to-left) and theme.
 
-`npm run test:arrange` runs the arrange rules against the current data and
-checks the §14 success criteria (no 4th day for max-3 people, period limits, no doubles,
-no cover overlap, edits survive "Fill open only", deterministic).
+PDF: on iOS and Android the roster is rendered by the system and can show Hebrew. On
+the web it is made with jsPDF, whose built-in fonts are Latin-1 only, so it is in
+English.
+
+## Checks
+
+```bash
+npm run typecheck
+npm run lint
+npm test
+npm run test:arrange -- <backup-file>
+```
+
+`npm test` runs the storage tests against Node's SQLite. `test:arrange` checks the
+solver against the §14 success criteria on real data: a backup file, or the desktop
+`data/` folder when no file is given.
+
+## Builds
+
+- Web: `npm run build:web` writes a static site to `dist/`. `expo-sqlite` on the web
+  needs these response headers on every page (the dev server already sends them):
+  - `Cross-Origin-Embedder-Policy: credentialless`
+  - `Cross-Origin-Opener-Policy: same-origin`
+- iOS / Android: build with EAS (`npx eas-cli@latest build`), or `npx expo run:ios|android`
+  locally. `ios/` and `android/` are generated, never edited by hand.
+
+## Layout
+
+- `src/app/`: screens (Expo Router tabs: Planner, Publish, People, Settings)
+- `src/domain/`: scheduling rules, solver, dates, checks, exports text, translations (no framework code)
+- `src/data/`: on-device SQLite database, the store hook, backups
+- `src/ui/`: shared components, theme, app state
+- `src/export/`: PDF, files and clipboard, with `.web.ts` versions for the browser
+- `scripts/`: Node scripts (solver check, backup export)

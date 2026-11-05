@@ -1,21 +1,19 @@
-// Run: npx tsx scripts/test-arrange.ts  — checks the §14 solver criteria on the app's data
-// (read through the same store as the app; DATA_STORE picks the backend).
-import path from "node:path";
-import { createStore } from "../server/storage";
-import { arrangeWeek } from "../src/arrange";
-import { ineligibleReasons } from "../src/eligibility";
-import { emptyWeek, setSlot } from "../src/week";
-import { weekdayIndex } from "../src/dates";
-import { defaultWeekDays } from "../src/workdays";
-import type { PeopleFile, Settings, Templates } from "../src/types";
+// Run: npm run test:arrange [backup-file]  — checks the §14 solver criteria on real data.
+// Reads a backup file exported from the app, else the desktop data/ folder (see load-data.ts).
+import { arrangeWeek } from "../src/domain/arrange";
+import { ineligibleReasons } from "../src/domain/eligibility";
+import { emptyWeek, setSlot } from "../src/domain/week";
+import { weekdayIndex } from "../src/domain/dates";
+import { defaultWeekDays } from "../src/domain/workdays";
+import { loadDocs } from "./load-data";
 
-const store = createStore({ dataDir: path.resolve("data"), exampleDir: path.resolve("data-example") });
-const settings = (await store.get("settings")) as Settings;
-const people = ((await store.get("people")) as PeopleFile).people;
-const templates = (await store.get("templates")) as Templates;
-await store.close();
+const { docs, source } = loadDocs(process.argv[2]);
+const settings = docs.settings;
+const people = docs.people.people;
+const templates = docs.templates;
+console.log(`data: ${source}`);
 if (people.length === 0) {
-  console.log("No staff yet (data/ is private and not in git). Run the app once and add staff first.");
+  console.log("No staff yet. Export a backup from the app (Settings → Backup) and pass it: npm run test:arrange <file>");
   process.exit(0);
 }
 let fails = 0;
