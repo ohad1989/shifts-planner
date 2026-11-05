@@ -36,8 +36,8 @@ yarn-error.*
 *.tsbuildinfo
 
 # Private staff and schedule data; starter files live in data-example/
-data/
-backups/
+/data/
+/backups/
 *.backup.json
 
 .claude/
