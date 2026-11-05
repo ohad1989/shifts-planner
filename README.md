@@ -92,3 +92,11 @@ Publish the JavaScript to phones over the air with EAS Update:
 ```bash
 npx eas-cli@latest update --branch main --environment production --message "<what changed>"
 ```
+
+Android APK for direct install (Expo's cloud build service; the signing key is stored on Expo):
+
+```bash
+npx eas-cli@latest build --platform android --profile preview
+```
+
+Profiles are in `eas.json`. `preview` builds receive EAS Updates published to the `main` branch.
