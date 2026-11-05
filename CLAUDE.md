@@ -85,7 +85,7 @@ Expo-specific rules are in `AGENTS.md` (Expo changes every SDK: check the versio
 
 - `npm run typecheck`, `npm run lint`, `npm test` pass. `npm run test:arrange` passes every §14 check on a synthetic 30-person backup (fills 66/66 seats).
 - Web: end-to-end in Chromium (desktop and phone sizes): import backup, arrange, seat picker, unassign, data kept after reload, publish, PDF and CSV downloads, People editor, Hebrew RTL, dark mode. No console errors.
-- iOS / Android: both bundles compile (`expo export`), but the app has **not** been run on a device or simulator yet. Check the PDF/CSV share sheet, backup import and the grid there.
+- iOS / Android: both bundles compile (`expo export`). An Android APK builds on EAS (`preview` profile, 2026-11-05), but the app has **not** been checked on a device yet. Check the PDF/CSV share sheet, backup import and the grid there.
 
 ## Known gaps / next steps
 
