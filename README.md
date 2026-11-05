@@ -83,3 +83,12 @@ solver against the §14 success criteria on real data: a backup file, or the des
 - `src/ui/`: shared components, theme, app state
 - `src/export/`: PDF, files and clipboard, with `.web.ts` versions for the browser
 - `scripts/`: Node scripts (solver check, backup export)
+
+## Expo project
+
+Linked to `@ohad1989/shift-planner` on expo.dev (`app.json` → `extra.eas.projectId`).
+Publish the JavaScript to phones over the air with EAS Update:
+
+```bash
+npx eas-cli@latest update --branch main --environment production --message "<what changed>"
+```

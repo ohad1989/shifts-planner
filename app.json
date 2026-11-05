@@ -27,6 +27,23 @@
       "expo-sqlite",
       "expo-sharing"
     ],
-    "scheme": "shiftplanner"
+    "scheme": "shiftplanner",
+    "owner": "ohad1989",
+    "extra": {
+      "router": {
+        "asyncRoutes": {
+          "web": true
+        }
+      },
+      "eas": {
+        "projectId": "e7b23b50-d1a2-4794-a7ee-f66fc4769b0b"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/e7b23b50-d1a2-4794-a7ee-f66fc4769b0b"
+    }
   }
 }
